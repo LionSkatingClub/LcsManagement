@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Background Image</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Full viewport height */
+      background-color: #f0f0f0; /* Fallback background color */
+    }
+
+    .background-container {
+      width: 80%; /* Adjusted width for the background area */
+      height: 80vh; /* Adjusted height for the background area */
+      background-image: url('./LSC.jpeg');
+      background-size: cover; /* Cover the background area */
+      background-position: center center; /* Center the background image */
+      position: relative;
+      overflow: hidden; /* Hide overflow to prevent image from stretching */
+      border: 2px solid #ccc; /* Border for visualization */
+    }
+
+    .content {
+      position: absolute; /* Position content inside the background container */
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Center the content perfectly */
+      background-color: rgba(255, 255, 255, 0.8); /* Light background color with opacity */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333; /* Dark text color for contrast */
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container">
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>This is a sample text. Replace it with your content.</p>
+    </div>
+  </div>
+</body>
+</html>
